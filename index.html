@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ふんわり米粉パン教室 - 毎日にやさしさと香りを添える</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>今林美恵子パン教室 | 講師が習いに来る技術力で40代からのセカンドキャリアを全力サポート</title>
+    <meta name="description" content="福岡・オンライン対応のパン教室。講師が習いに来る技術力、指導歴20年・3000人指導の実績。講師養成コース・開業サポートで40代からのセカンドキャリアを全力サポート。">
     <style>
         * {
             margin: 0;
@@ -26,7 +25,7 @@
             padding: 0 20px;
         }
 
-        /* ヘッダー */
+        /* ヘッダー - register-choice.htmlと完全統一 */
         .header {
             background: linear-gradient(135deg, #f5f2e9 0%, #e8e4d9 100%);
             padding: 15px 0;
@@ -76,10 +75,6 @@
             padding: 0;
         }
 
-        .nav-menu li {
-            margin: 0;
-        }
-
         .nav-menu a {
             color: #6b5b47;
             text-decoration: none;
@@ -93,573 +88,288 @@
             color: #8b7355;
         }
 
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
+        /* ヒーローセクション */
+        .hero-section {
+            background: linear-gradient(135deg, #f5f2e9 0%, #e8e4d9 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.2rem;
             color: #6b5b47;
-            cursor: pointer;
-            padding: 5px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.3;
         }
 
-        .mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-top: 1px solid #e8e4d9;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-menu ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .mobile-menu li {
-            margin: 0;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .mobile-menu li:last-child {
-            border-bottom: none;
-        }
-
-        .mobile-menu a {
-            display: block;
-            padding: 15px 0;
-            color: #6b5b47;
-            text-decoration: none;
-            font-size: 1rem;
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #8b7355;
+            margin-bottom: 30px;
             font-weight: 500;
         }
 
-        .mobile-menu a:hover {
-            color: #8b7355;
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 35px;
         }
 
-        /* ファーストビュー */
-                 .hero {
-             background-image: url('27022694_l.jpg');
-             background-size: cover;
-             background-position: center;
-             background-repeat: no-repeat;
-             position: relative;
-             min-height: 80vh;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             text-align: center;
-         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-
-        .hero h2 {
-            font-size: 2.8rem;
-            color: white;
-            margin-bottom: 30px;
+        .badge {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
             font-weight: 600;
-            line-height: 1.3;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #6b5b47;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            color: white;
-            margin-bottom: 40px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        .hero-cta {
-            position: absolute;
-            bottom: 60px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-        }
-
-        .hero-cta-button {
+        .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #8b7355 0%, #6b5b47 100%);
-            color: white;
-            padding: 20px 50px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-            border: 2px solid white;
-        }
-
-        .hero-cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            background: linear-gradient(135deg, #6b5b47 0%, #8b7355 100%);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #8b7355 0%, #6b5b47 100%);
-            color: white;
-            padding: 18px 40px;
+            padding: 15px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(107, 91, 71, 0.3);
             transition: all 0.3s ease;
-            margin: 20px 10px;
+            text-align: center;
         }
 
-        .cta-button:hover {
+        .btn-primary {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(107, 91, 71, 0.4);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+
+        .btn-line {
+            background: #00C300;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 195, 0, 0.3);
+        }
+
+        .btn-line:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 195, 0, 0.4);
         }
 
         /* セクション共通 */
         .section {
-            padding: 80px 0;
+            padding: 50px 20px;
         }
 
         .section-title {
-            text-align: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #6b5b47;
-            margin-bottom: 50px;
+            text-align: center;
+            margin-bottom: 35px;
             font-weight: 600;
         }
 
-        /* 特徴 */
-        .features {
-            background-color: #fefefe;
-        }
-
+        /* 特徴セクション */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .feature-card {
             background: white;
-            padding: 40px 30px;
+            padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #f5f2e9 0%, #e8e4d9 100%);
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: #6b5b47;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
         }
 
         .feature-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #6b5b47;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 600;
         }
 
         .feature-card p {
             color: #8b7355;
-            line-height: 1.6;
-        }
-
-        /* 講師紹介 */
-        .instructor {
-            background: linear-gradient(135deg, #faf8f3 0%, #f5f2e9 100%);
-        }
-
-        .instructor-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .instructor-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 0 auto;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .instructor-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .instructor-info h3 {
-            font-size: 1.5rem;
-            color: #6b5b47;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .instructor-info p {
-            color: #8b7355;
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .instructor-badges {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            background: #6b5b47;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        /* 受講者の声 */
-        .testimonials {
-            background-color: #fefefe;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            font-size: 4rem;
-            color: #e8e4d9;
-            position: absolute;
-            top: -10px;
-            left: 20px;
-        }
-
-        .testimonial-text {
-            color: #8b7355;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            color: #6b5b47;
-            font-weight: 600;
-            text-align: right;
-        }
-
-        /* 横スクロールギャラリーのスタイル */
-        .photo-gallery {
-            padding: 40px 20px;
-            background-color: #fffaf4;
-        }
-
-        .gallery-scroll {
-            display: flex;
-            overflow-x: auto;
-            gap: 20px;
-            padding-bottom: 10px;
-            scroll-snap-type: x mandatory;
-        }
-
-                 .gallery-scroll img {
-             width: 250px;
-             height: 250px;
-             border-radius: 12px;
-             object-fit: cover;
-             scroll-snap-align: start;
-             flex-shrink: 0;
-             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-         }
-
-       
-        /* FAQ */
-        .faq {
-            background-color: #fefefe;
-        }
-
-        .faq-item {
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            background: #f5f2e9;
-            padding: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            color: #6b5b47;
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-size: 1rem;
-        }
-
-        .faq-answer {
-            padding: 20px;
-            color: #8b7355;
-            line-height: 1.6;
-            display: none;
-        }
-
-        .faq-answer.active {
-            display: block;
-        }
-
-        /* 共感導線 */
-        .empathy {
-            background: linear-gradient(135deg, #faf8f3 0%, #f5f2e9 100%);
-        }
-
-        .empathy-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .empathy-text {
-            margin-bottom: 40px;
-        }
-
-        .empathy-text p {
-            font-size: 1.2rem;
-            color: #6b5b47;
-            margin-bottom: 15px;
-            font-weight: 500;
-            line-height: 1.8;
-        }
-
-        .empathy-cta {
-            margin-top: 30px;
-        }
-
-        .empathy-cta p {
-            font-size: 1.3rem;
-            color: #6b5b47;
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-
-        .empathy-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            padding: 20px 50px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
-            border: 2px solid white;
-        }
-
-        .empathy-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
-            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-        }
-
-        /* 3ステップ選択肢 */
-        .steps {
-            background: linear-gradient(135deg, #faf8f3 0%, #f5f2e9 100%);
-        }
-
-        .steps-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .main-consult {
-            background: white;
-            padding: 60px 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-bottom: 40px;
-            border: 3px solid #e74c3c;
-        }
-
-        .main-consult h3 {
-            font-size: 2rem;
-            color: #6b5b47;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .main-consult p {
-            font-size: 1.2rem;
-            color: #8b7355;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .main-consult-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            padding: 25px 60px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
-        }
-
-        .main-consult-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
-            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-        }
-
-        .secondary-options {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-
-        .trial-option {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .trial-option:hover {
-            transform: translateY(-5px);
-        }
-
-        .trial-option h4 {
-            font-size: 1.4rem;
-            color: #6b5b47;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .trial-option p {
-            color: #8b7355;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .trial-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #8b7355 0%, #6b5b47 100%);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(107, 91, 71, 0.3);
-        }
-
-        .trial-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(107, 91, 71, 0.4);
-        }
-
-        .newsletter-option {
-            background: #f8f9fa;
-            padding: 30px 25px;
-            border-radius: 15px;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            border: 1px solid #e9ecef;
-        }
-
-        .newsletter-option h4 {
-            font-size: 1.1rem;
-            color: #6b5b47;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .newsletter-option p {
-            color: #8b7355;
-            margin-bottom: 20px;
             line-height: 1.5;
             font-size: 0.95rem;
         }
 
-        .newsletter-button {
-            display: inline-block;
-            background: #6c757d;
+        /* 講師紹介セクション */
+        .instructor-section {
+            background: #f9f7f4;
+        }
+
+        .instructor-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .instructor-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #e8e4d9 0%, #d4c8b8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #8b7355;
+        }
+
+        .instructor-name {
+            font-size: 1.6rem;
+            color: #6b5b47;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .instructor-title {
+            font-size: 1rem;
+            color: #8b7355;
+            margin-bottom: 25px;
+        }
+
+        .instructor-description {
+            color: #666;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* コースセクション */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, #8b7355 0%, #6b5b47 100%);
             color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .course-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .course-content {
+            padding: 25px;
+        }
+
+        .course-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .course-features li {
+            padding: 6px 0;
+            color: #666;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .course-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .course-btn {
+            display: block;
+            text-align: center;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
 
-        .newsletter-button:hover {
-            background: #5a6268;
-            transform: translateY(-1px);
+        .course-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        /* お問い合わせセクション */
+        .contact-section {
+            background: linear-gradient(135deg, #f5f2e9 0%, #e8e4d9 100%);
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-card h3 {
+            color: #6b5b47;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .contact-card p {
+            color: #8b7355;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
         }
 
         /* フッター */
@@ -667,27 +377,11 @@
             background: #6b5b47;
             color: white;
             text-align: center;
-            padding: 40px 0;
+            padding: 25px 20px;
         }
 
-        .footer p {
-            margin-bottom: 10px;
-        }
-
-        /* レスポンシブ対応 */
+        /* レスポンシブ */
         @media (max-width: 768px) {
-            .header-content {
-                position: relative;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .mobile-menu-toggle {
-                display: block;
-            }
-
             .header-title {
                 font-size: 1.2rem;
             }
@@ -698,427 +392,203 @@
                 font-size: 0.8rem;
             }
 
-                         .hero {
-                 min-height: 60vh;
-             }
-
-            .hero h2 {
-                font-size: 2rem;
-                margin-bottom: 20px;
+            .nav-menu {
+                display: none;
             }
 
-            .hero p {
-                font-size: 1.1rem;
-                margin-bottom: 30px;
+            .hero-content h1 {
+                font-size: 1.7rem;
             }
 
-            .hero-cta {
-                bottom: 40px;
-            }
-
-            .hero-cta-button {
-                padding: 15px 40px;
+            .hero-subtitle {
                 font-size: 1.1rem;
             }
 
-            .section-title {
-                font-size: 1.6rem;
+            .hero-badges {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .instructor-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .instructor-image {
-                width: 150px;
-                height: 150px;
-                margin-bottom: 20px;
-            }
-
-            .features-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-scroll {
-                gap: 15px;
-                padding-bottom: 8px;
-            }
-
-                         .gallery-scroll img {
-                 width: 200px;
-                 height: 200px;
-             }
-
-            .secondary-options {
-                grid-template-columns: 1fr;
-            }
-
-            .empathy-text p {
-                font-size: 1.1rem;
-            }
-
-            .empathy-button {
-                padding: 18px 40px;
-                font-size: 1.1rem;
-            }
-
-            .main-consult {
-                padding: 40px 30px;
-            }
-
-            .main-consult h3 {
-                font-size: 1.6rem;
-            }
-
-            .main-consult p {
-                font-size: 1.1rem;
-            }
-
-            .main-consult-button {
-                padding: 20px 50px;
-                font-size: 1.2rem;
-            }
-
-            .container {
-                padding: 0 15px;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
 
             .section {
-                padding: 60px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                min-height: 70vh;
+                padding: 35px 15px;
             }
 
-            .hero h2 {
-                font-size: 1.6rem;
-                margin-bottom: 15px;
+            .section-title {
+                font-size: 1.5rem;
             }
 
-            .hero p {
-                font-size: 1rem;
-                margin-bottom: 25px;
+            .features-grid,
+            .courses-grid {
+                grid-template-columns: 1fr;
             }
 
-            .hero-cta {
-                bottom: 30px;
-            }
-
-            .hero-cta-button {
-                padding: 12px 30px;
-                font-size: 1rem;
-            }
-
-            .cta-button {
-                padding: 15px 30px;
-                font-size: 1rem;
-            }
-
-            .feature-card,
-            .testimonial-card,
-            .step-card {
-                padding: 25px 20px;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- ヘッダー -->
+    <!-- ヘッダー - register-choice.htmlと完全統一 -->
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="header-left">
-                    <div class="logo">
-                        [ロゴ]
-                    </div>
-                    <h1 class="header-title">ふんわり米粉パン教室</h1>
+                    <div class="logo">🥐</div>
+                    <h1 class="header-title">今林美恵子パン教室</h1>
                 </div>
                 <nav>
                     <ul class="nav-menu">
+                        <li><a href="#hero">ホーム</a></li>
                         <li><a href="#features">特徴</a></li>
                         <li><a href="#instructor">講師紹介</a></li>
-                        <li><a href="#testimonials">受講者の声</a></li>
-                        <li><a href="#faq">よくある質問</a></li>
-                        <li><a href="#consult">お問い合わせ</a></li>
+                        <li><a href="#courses">コース案内</a></li>
+                        <li><a href="#contact">お問い合わせ</a></li>
+                        <li><a href="register-choice.html?utm_source=website&utm_medium=nav&utm_campaign=nav_consult">個別相談</a></li>
                     </ul>
-                    <button class="mobile-menu-toggle">☰</button>
                 </nav>
-                <div class="mobile-menu">
-                    <ul>
-                        <li><a href="#features">特徴</a></li>
-                        <li><a href="#instructor">講師紹介</a></li>
-                        <li><a href="#testimonials">受講者の声</a></li
-                        <li><a href="#faq">よくある質問</a></li>
-                        <li><a href="#consult">お問い合わせ</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </header>
 
-         <!-- ファーストビュー -->
-     <section class="hero">
-         <div class="hero-content">
-             <h2>毎日にやさしさと香りを添える<br>ふんわり米粉パン生活</h2>
-             <p>40〜50代女性のための、健康にやさしいグルテンフリー米粉パン教室です。<br>
-             天然酵母と100%米粉で作る、体にやさしいパンづくりを一緒に楽しみませんか？</p>
-         </div>
-         <div class="hero-cta">
-             <a href="#" id="consult-cta" class="hero-cta-button">個別相談はこちら</a>
-            <script>
-              document.getElementById('consult-cta').addEventListener('click', function(e) {
-            　e.preventDefault();
-            　var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            　if(isMobile){
-      　　　　window.location.href = "https://lin.ee/kz9Mt1S";
-    　　　　　} else {
-      　　　　window.location.href = "https://miminosuke.github.io/imapan_consult/register-choice.html";
-   　　　　　 }
-  　　　　　　});
-</script>      
-         </div>
-     </section>
-
-     <!-- 横スクロール可能な写真ギャラリー -->
-     <section class="photo-gallery">
-         <div class="gallery-scroll">
-             <img src="lesson1.jpg" alt="教室の様子" />
-             <img src="bread1.png" alt="焼き立てパン1" />
-             <img src="bread2.png" alt="焼き立てパン2" />
-             <img src="bread3.png" alt="焼き立てパン3" />
-             <img src="bread4.png" alt="焼き立てパン4" />
-             <img src="lesson2.png" alt="レッスン風景" />
-         </div>
-     </section>
-
-     <!-- 共感導線 -->
-    <section class="section empathy">
+    <!-- ヒーローセクション -->
+    <section id="hero" class="hero-section">
         <div class="container">
-            <h2 class="section-title">こんなお悩みありませんか？</h2>
-            <div class="empathy-content">
-                <div class="empathy-text">
-                    <p>「健康に気を遣いたいけど、美味しいパンも食べたい」</p>
-                    <p>「Zoomが初めてで不安...」</p>
-                    <p>「不器用だから、パンづくりなんて無理かも」</p>
-                    <p>「副業として何か始めたいけど、何から始めればいいかわからない」</p>
+            <div class="hero-content">
+                <h1>🏆講師が習いに来るパン教室</h1>
+                <p class="hero-subtitle">福岡・オンライン対応｜40代からのセカンドキャリア全力サポート</p>
+                
+                <div class="hero-badges">
+                    <div class="badge">👨‍🍳 プロも認める技術力</div>
+                    <div class="badge">📊 指導歴20年・3000人指導</div>
+                    <div class="badge">📱 Instagram 1000人フォロー</div>
+                    <div class="badge">🎯 講師養成・開業サポート</div>
                 </div>
-                <div class="empathy-cta">
-                    <p>そんなお悩み、解決します！</p>
-                    <a href="#" id="consult-cta" class="hero-cta-button">個別相談はこちら</a>
-<script>
-  document.getElementById('consult-cta').addEventListener('click', function(e) {
-    e.preventDefault();
-    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    if(isMobile){
-      window.location.href = "https://lin.ee/kz9Mt1S";
-    } else {
-      window.location.href = "https://miminosuke.github.io/imapan_consult/register-choice.html";
-    }
-  });
-</script>               
+
+                <div class="cta-buttons">
+                    <a href="register-choice.html?utm_source=website&utm_medium=hero&utm_campaign=main_cta" class="btn btn-primary">
+                        📝 個別相談・お申し込み
+                    </a>
+                    <a href="https://lin.ee/kz9Mt1S?utm_source=website&utm_medium=hero&utm_campaign=line_cta" class="btn btn-line" target="_blank" rel="noopener noreferrer">
+                        💬 LINEで相談
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 教室の特徴 -->
-    <section id="features" class="section features">
+    <!-- 特徴セクション -->
+    <section id="features" class="section">
         <div class="container">
-            <h2 class="section-title">教室の特徴</h2>
+            <h2 class="section-title">選ばれる3つの理由</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🌾</div>
-                    <h3>100%米粉と天然酵母</h3>
-                    <p>グルテンフリーで体にやさしい、天然酵母のふんわり米粉パン。小麦アレルギーの方も安心して楽しめます。</p>
+                    <div class="feature-icon">🏆</div>
+                    <h3>講師が習いに来る技術力</h3>
+                    <p>プロの講師も技術習得に訪れる高い技術力。常に最新の技術を導入し、20年間で3000人以上を指導してきた実績があります。</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎁</div>
-                    <h3>おもてなしの知識も学べる</h3>
-                    <p>パンだけでなく、菓子や料理にも活かせる「おもてなし」の知識も一緒に学べます。ご家族やお友達に喜ばれること間違いなし！</p>
-                </div>
+                
                 <div class="feature-card">
                     <div class="feature-icon">👩‍🏫</div>
-                    <h3>パンシェルジュ1級の講師</h3>
-                    <p>講師歴30年のベテラン講師が、ひとりひとりのペースに合わせて丁寧に指導。初めての方でも安心して参加できます。</p>
+                    <h3>講師養成・開業サポート</h3>
+                    <p>単なるパン作りだけでなく、講師として独立したい方、教室開業を目指す方への総合的なサポートを提供しています。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>福岡・オンライン対応</h3>
+                    <p>福岡での対面レッスンはもちろん、全国どこからでも受講可能なオンラインレッスンも充実。ライフスタイルに合わせて選択できます。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 講師紹介 -->
-    <section id="instructor" class="section instructor">
+    <!-- 講師紹介セクション -->
+    <section id="instructor" class="section instructor-section">
         <div class="container">
             <h2 class="section-title">講師紹介</h2>
             <div class="instructor-content">
-                <div class="instructor-image">
-                    <img src="講師画像.png" alt="講師の写真">
+                <div class="instructor-avatar">👩‍🍳</div>
+                <h3 class="instructor-name">今林美恵子</h3>
+                <p class="instructor-title">パン教室講師・料理研究家</p>
+                <div class="instructor-description">
+                    <p>20年間のパン教室運営で3000人以上を指導。講師が技術を習いに来るほどの技術力を持ち、常に新しい技術の導入に熱心です。パン以外にも菓子、料理の腕があり、ラッピングやテーブルコーディネートにも定評があります。</p>
+                    <br>
+                    <p>現在はカルチャーセンターでの指導に加え、オンラインでのパン教室も展開。40代以降の女性のセカンドキャリア支援として、講師養成コースや開業サポートにも力を入れています。</p>
                 </div>
-                <div class="instructor-info">
-                    <h3>今林 美栄子（いまばやし みえこ）</h3>
-                    <p>パンシェルジュ1級取得</p>
-                    <p>講師歴30年のベテラン講師として、これまで1000名以上の生徒さんにパンづくりの楽しさを伝えてきました。</p>
-                    <p>「予約の取れない教室」として人気を博し、多くの生徒さんから「初めてでも安心して参加できた」「家で美味しいパンが焼けるようになった」と喜ばれています。</p>
-                    <div class="instructor-badges">
-                        <span class="badge">パンシェルジュ1級</span>
-                        <br><span class="badge">講師歴30年</span>
-                        <br><span class="badge">予約の取れない教室</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- コースセクション -->
+    <section id="courses" class="section">
+        <div class="container">
+            <h2 class="section-title">コース案内</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3>🎯 基礎・スキルアップ</h3>
+                        <p>詳細は個別相談で</p>
+                    </div>
+                    <div class="course-content">
+                        <ul class="course-features">
+                            <li>パン作りの基本技術</li>
+                            <li>材料の選び方・扱い方</li>
+                            <li>発酵の見極め方</li>
+                            <li>成形技術の習得</li>
+                            <li>失敗しないコツ</li>
+                        </ul>
+                        <a href="register-choice.html?utm_source=website&utm_medium=course&utm_campaign=basic_course" class="course-btn">詳細を相談する</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3>👩‍🏫 講師養成コース</h3>
+                        <p>詳細は個別相談で</p>
+                    </div>
+                    <div class="course-content">
+                        <ul class="course-features">
+                            <li>高度な技術習得</li>
+                            <li>教え方のノウハウ</li>
+                            <li>レシピ開発技術</li>
+                            <li>生徒対応の方法</li>
+                            <li>講師としての心構え</li>
+                        </ul>
+                        <a href="register-choice.html?utm_source=website&utm_medium=course&utm_campaign=instructor_course" class="course-btn">詳細を相談する</a>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3>🏢 開業サポート</h3>
+                        <p>詳細は個別相談で</p>
+                    </div>
+                    <div class="course-content">
+                        <ul class="course-features">
+                            <li>教室開業の準備</li>
+                            <li>集客方法の指導</li>
+                            <li>料金設定のアドバイス</li>
+                            <li>運営ノウハウの提供</li>
+                            <li>継続的なサポート</li>
+                        </ul>
+                        <a href="register-choice.html?utm_source=website&utm_medium=course&utm_campaign=business_support" class="course-btn">詳細を相談する</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 受講者の声 -->
-    <section id="testimonials" class="section testimonials">
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="section-title">受講者の声</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Zoomが初めてでも安心でした。先生がとても丁寧に教えてくださって、初回から美味しいパンが焼けました！</p>
-                    <p class="testimonial-author">- 45歳 主婦</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">パンが家で焼けたことに感動しました。家族も大喜びで、毎週末が楽しみになっています。</p>
-                    <p class="testimonial-author">- 52歳 会社員</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">健康に気を遣っていたので、グルテンフリーの米粉パンは本当に嬉しいです。体調も良くなりました。</p>
-                    <p class="testimonial-author">- 48歳 主婦</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">不器用な私でも、先生の指導のおかげで上手に焼けるようになりました。自信がつきました！</p>
-                    <p class="testimonial-author">- 55歳 パート</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- よくある質問 -->
-    <section id="faq" class="section faq">
-        <div class="container">
-            <h2 class="section-title">よくある質問</h2>
-            <div class="faq-item">
-                <button class="faq-question">Zoomが初めてでも大丈夫ですか？</button>
-                <div class="faq-answer">
-                    はい、大丈夫です！Zoomの使い方も丁寧にご説明いたします。事前に接続テストも行いますので、初めての方でも安心してご参加いただけます。
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">オーブンがなくても参加できますか？</button>
-                <div class="faq-answer">
-                    オーブンが必要になります。ただし、トースターオーブンでも作れるレシピもご紹介していますので、まずはお気軽にご相談ください。
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">不器用でも美味しいパンが焼けますか？</button>
-                <div class="faq-answer">
-                    はい、大丈夫です！多くの生徒さんが「不器用な私でも上手に焼けた」と喜ばれています。ひとりひとりのペースに合わせて丁寧に指導いたします。
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">材料はどこで購入できますか？</button>
-                <div class="faq-answer">
-                    米粉や天然酵母など、必要な材料の購入方法も詳しくご案内いたします。
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">副業として教室を開きたいのですが？</button>
-                <div class="faq-answer">
-                    多くの生徒さんが副業として教室を開かれています。教室運営のノウハウも含めて、しっかりとサポートいたします。
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3ステップ選択肢 -->
-    <section id="consult" class="section steps">
-        <div class="container">
-            <div class="steps-container">
-                <div class="main-consult">
-                    <h3>まずは個別相談から始めませんか？</h3>
-                    <p>あなたのご希望や不安に合わせて、最適なプランをご提案いたします。<br>
-                    健康への不安、Zoomの使い方、副業への興味...どんなことでもお気軽にご相談ください。</p>
-                    <a href="#" id="consult-cta" class="hero-cta-button">個別相談はこちら</a>
-<script>
-  document.getElementById('consult-cta').addEventListener('click', function(e) {
-    e.preventDefault();
-    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    if(isMobile){
-      window.location.href = "https://lin.ee/kz9Mt1S";
-    } else {
-      window.location.href = "https://miminosuke.github.io/imapan_consult/register-choice.html";
-    }
-  });
-</script>                </div>
-                　 <div class="newsletter-option">
-                        <h4>メルマガ登録</h4>
-                        <p>「パン通信」を無料配信！レシピやコツ、教室の最新情報をお届けします。</p>
-                        <a href="#" class="newsletter-button">メルマガ登録はこちら</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- フッター -->
-    <footer class="footer">
-        <div class="container">
-            <p>ふんわり米粉パン教室</p>
-            <p>毎日にやさしさと香りを添える</p>
-            <p>© 2025 ふんわり米粉パン教室 All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // FAQのアコーディオン機能
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const isActive = answer.classList.contains('active');
-                
-                // 他の回答を閉じる
-                document.querySelectorAll('.faq-answer').forEach(ans => {
-                    ans.classList.remove('active');
-                });
-                
-                // クリックされた回答を開く/閉じる
-                if (!isActive) {
-                    answer.classList.add('active');
-                }
-            });
-        });
-
-        // モバイルメニューの切り替え
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-        });
-
-        // ナビゲーションリンクのスムーススクロール
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight - 20;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    // モバイルメニューを閉じる
-                    mobileMenu.classList.remove('active');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
-
+            <h2 class="section-title">お問い合わせ・お申し込み</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>💬 LINE公式アカウント</h3>
+                    <p>メッセージでのや<span class="cursor">█</span>
