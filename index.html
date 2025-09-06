@@ -88,17 +88,101 @@
             color: #8b7355;
         }
 
-        /* ヒーローセクション - 画像組み込み版 */
-        .hero-section {
-            background: linear-gradient(135deg, #f5f2e9 0%, #e8e4d9 100%);
-            padding: 60px 20px;
-            text-align: center;
+        /* ファーストビュー */
+                 .hero {
+             background-image: url('27022694_l.jpg');
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;
+             position: relative;
+             min-height: 80vh;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             text-align: center;
+         }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
         }
 
         .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
         }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 30px;
+            font-weight: 600;
+            line-height: 1.3;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-cta {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .hero-cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b7355 0%, #6b5b47 100%);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .hero-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #6b5b47 0%, #8b7355 100%);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b7355 0%, #6b5b47 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(107, 91, 71, 0.3);
+            transition: all 0.3s ease;
+            margin: 20px 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(107, 91, 71, 0.4);
+        }
+
 
         /* ヒーロー画像スタイル */
         .hero-banner-image {
@@ -590,3 +674,4 @@
     </footer>
 </body>
 </html>
+
