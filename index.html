@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ふんわり米粉美恵子パン教室 | 講師が習いに来る技術力で40代からのセカンドキャリアを全力サポート</title>
-    <meta name="description" content="福岡・オンライン対応のパン教室。指導歴20年・1000人指導の実績。">
+    <title>今林美恵子パン教室 | 講師が習いに来る技術力で40代からのセカンドキャリアを全力サポート</title>
+    <meta name="description" content="福岡・オンライン対応のパン教室。講師が習いに来る技術力、指導歴20年・3000人指導の実績。講師養成コース・開業サポートで40代からのセカンドキャリアを全力サポート。">
     <style>
         * {
             margin: 0;
@@ -88,7 +88,7 @@
             color: #8b7355;
         }
 
-        /* ヒーローセクション - 画像全幅＋文字オーバーレイ */
+        /* ヒーローセクション */
         .hero {
             width: 100vw;
             margin-left: calc(50% - 50vw);
@@ -252,47 +252,108 @@
             font-size: 0.95rem;
         }
 
-        /* 講師紹介セクション */
+        /* 講師紹介セクション - 新しい左右レイアウト */
         .instructor-section {
             background: #f9f7f4;
         }
 
-        .instructor-content {
-            max-width: 700px;
+        .instructor-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1000px;
             margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .instructor-photo-container {
+            flex: 0 0 200px;
             text-align: center;
         }
 
-        .instructor-avatar {
-            width: 150px;
-            height: 150px;
+        .instructor-photo {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            margin: 0 auto 25px;
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 15px;
+        }
+
+        .instructor-photo-fallback {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
             background: linear-gradient(135deg, #e8e4d9 0%, #d4c8b8 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 4rem;
             color: #8b7355;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 15px;
+        }
+
+        .instructor-content {
+            flex: 1;
+            text-align: left;
         }
 
         .instructor-name {
-            font-size: 1.6rem;
+            font-size: 2rem;
             color: #6b5b47;
-            margin-bottom: 8px;
-            font-weight: 600;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .instructor-title {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #8b7355;
             margin-bottom: 25px;
+            font-weight: 500;
         }
 
         .instructor-description {
             color: #666;
-            line-height: 1.6;
-            text-align: left;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .instructor-description p {
+            margin-bottom: 15px;
+        }
+
+        .instructor-highlights {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .instructor-highlights li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+            color: #6b5b47;
+            font-weight: 500;
+        }
+
+        .instructor-highlights li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #27ae60;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .instructor-cta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         /* コースセクション */
@@ -496,6 +557,41 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
+            /* モバイル：講師紹介を縦並びに */
+            .instructor-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 25px;
+                padding: 30px 20px;
+            }
+
+            .instructor-photo-container {
+                flex-basis: auto;
+            }
+
+            .instructor-photo,
+            .instructor-photo-fallback {
+                width: 150px;
+                height: 150px;
+            }
+
+            .instructor-photo-fallback {
+                font-size: 3rem;
+            }
+
+            .instructor-content {
+                text-align: center;
+            }
+
+            .instructor-name {
+                font-size: 1.6rem;
+            }
+
+            .instructor-cta {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -506,7 +602,7 @@
             <div class="header-content">
                 <div class="header-left">
                     <div class="logo">🥐</div>
-                    <h1 class="header-title">ふんわり米粉パン教室</h1>
+                    <h1 class="header-title">今林美恵子パン教室</h1>
                 </div>
                 <nav>
                     <ul class="nav-menu">
@@ -515,7 +611,6 @@
                         <li><a href="#instructor">講師紹介</a></li>
                         <li><a href="#courses">コース案内</a></li>
                         <li><a href="#contact">お問い合わせ</a></li>
-                        <!-- 修正①：ヘッダーからの遷移先を指定URLに変更 -->
                         <li><a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=nav&utm_campaign=nav_consult">個別相談</a></li>
                     </ul>
                 </nav>
@@ -526,17 +621,17 @@
     <!-- ヒーローセクション -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <h2 class="hero-title">講師が習いに来るパン教室</h2>
+            <h2 class="hero-title">🏆講師が習いに来るパン教室</h2>
             <p class="hero-subtitle">福岡・オンライン対応｜40代からのセカンドキャリア全力サポート</p>
             
             <div class="hero-badges">
                 <div class="hero-badge">👨‍🍳 プロも認める技術力</div>
-                <div class="hero-badge">📊 指導歴20年・1000人指導</div>
+                <div class="hero-badge">📊 指導歴20年・3000人指導</div>
+                <div class="hero-badge">📱 Instagram 1000人フォロー</div>
                 <div class="hero-badge">🎯 講師養成・開業サポート</div>
             </div>
 
             <div class="hero-cta-buttons">
-                <!-- 修正②：個別相談ボタンを指定URLに変更 -->
                 <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=hero&utm_campaign=main_cta" class="hero-btn hero-btn-primary">
                     📝 個別相談・お申し込み
                 </a>
@@ -555,7 +650,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">🏆</div>
                     <h3>講師が習いに来る技術力</h3>
-                    <p>プロの講師も技術習得に訪れる高い技術力。常に最新の技術を導入し、20年間で1000人以上を指導してきた実績があります。</p>
+                    <p>プロの講師も技術習得に訪れる高い技術力。常に最新の技術を導入し、20年間で3000人以上を指導してきた実績があります。</p>
                 </div>
                 
                 <div class="feature-card">
@@ -573,40 +668,38 @@
         </div>
     </section>
 
-    <!-- 講師紹介セクション -->
+    <!-- 講師紹介セクション - 新しい左右レイアウト -->
     <section id="instructor" class="section instructor-section">
         <div class="container">
             <h2 class="section-title">講師紹介</h2>
-            <div class="instructor-content">
-                <div class="instructor-avatar">👩‍🍳</div>
-                <h3 class="instructor-name">今林美恵子</h3>
-                <p class="instructor-title">パン教室講師・テーブルコーディネーター</p>
-                <div class="instructor-description">
-                    <p>20年間のパン教室運営で1000人以上を指導。プロの講師も技術を習いに来るほどの技術力を持ち、常に新しい技術の導入に熱心です。パン以外にも菓子、料理の腕があり、ラッピングやテーブルコーディネートにも定評があります。</p>
-                    <br>
-                    <p>現在はカルチャーセンターでの指導に加え、オンラインでのパン教室も展開。40代以降の女性のセカンドキャリア支援として、講師養成コースや開業サポートにも力を入れています。</p>
+            
+            <div class="instructor-wrapper">
+                <div class="instructor-photo-container">
+                    <!-- 講師の実際の写真ファイル名に変更してください（例：instructor-mieko.jpg） -->
+                    <img src="instructor-mieko.jpg" alt="今林美恵子講師のプロフィール写真" class="instructor-photo" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" loading="lazy">
+                    <div class="instructor-photo-fallback" style="display: none;">👩‍🍳</div>
                 </div>
-            </div>
-        </div>
-    </section>
+                
+                <div class="instructor-content">
+                    <h3 class="instructor-name">今林美恵子</h3>
+                    <p class="instructor-title">パン教室講師・料理研究家</p>
+                    
+                    <div class="instructor-description">
+                        <p>20年間のパン教室運営で3000人以上を指導。プロの講師も技術を習いに来るほどの技術力を持ち、常に新しい技術の導入に熱心です。パン以外にも菓子、料理の腕があり、ラッピングやテーブルコーディネートにも定評があります。</p>
+                        
+                        <p>現在はカルチャーセンターでの指導に加え、オンラインでのパン教室も展開。40代以降の女性のセカンドキャリア支援として、講師養成コースや開業サポートにも力を入れています。</p>
+                    </div>
 
-    <!-- 講師紹介 -->
-    <section id="instructor" class="section instructor">
-        <div class="container">
-            <h2 class="section-title">講師紹介</h2>
-            <div class="instructor-content">
-                <div class="instructor-image">
-                    <img src="講師画像.png" alt="講師の写真">
-                </div>
-                <div class="instructor-info">
-                    <h3>今林 美栄子（いまばやし みえこ）</h3>
-                    <p>パンシェルジュ1級取得</p>
-                    <p>講師歴30年のベテラン講師として、これまで1000名以上の生徒さんにパンづくりの楽しさを伝えてきました。</p>
-                    <p>「予約の取れない教室」として人気を博し、多くの生徒さんから「初めてでも安心して参加できた」「家で美味しいパンが焼けるようになった」と喜ばれています。</p>
-                    <div class="instructor-badges">
-                        <span class="badge">パンシェルジュ1級</span>
-                        <br><span class="badge">講師歴30年</span>
-                        <br><span class="badge">予約の取れない教室</span>
+                    <ul class="instructor-highlights">
+                        <li>プロも認める技術力と最新手法の継続導入</li>
+                        <li>40代からのセカンドキャリアを現実にする講師養成</li>
+                        <li>開業サポートまで一気通貫で伴走</li>
+                    </ul>
+
+                    <div class="instructor-cta">
+                        <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=instructor&utm_campaign=consult" class="btn btn-primary">個別相談・お申し込み</a>
+                        <a href="https://lin.ee/kz9Mt1S?utm_source=website&utm_medium=instructor&utm_campaign=line" class="btn btn-line" target="_blank" rel="noopener noreferrer">LINEで相談</a>
                     </div>
                 </div>
             </div>
@@ -631,7 +724,6 @@
                             <li>成形技術の習得</li>
                             <li>失敗しないコツ</li>
                         </ul>
-                        <!-- 修正③：詳細を相談するボタンを指定URLに変更 -->
                         <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=course&utm_campaign=basic_course" class="course-btn">詳細を相談する</a>
                     </div>
                 </div>
@@ -649,7 +741,6 @@
                             <li>生徒対応の方法</li>
                             <li>講師としての心構え</li>
                         </ul>
-                        <!-- 修正④：詳細を相談するボタンを指定URLに変更 -->
                         <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=course&utm_campaign=instructor_course" class="course-btn">詳細を相談する</a>
                     </div>
                 </div>
@@ -667,7 +758,6 @@
                             <li>運営ノウハウの提供</li>
                             <li>継続的なサポート</li>
                         </ul>
-                        <!-- 修正⑤：詳細を相談するボタンを指定URLに変更 -->
                         <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=course&utm_campaign=business_support" class="course-btn">詳細を相談する</a>
                     </div>
                 </div>
@@ -680,17 +770,17 @@
         <div class="container">
             <h2 class="section-title">お問い合わせ・お申し込み</h2>
             <div class="contact-grid">
-                  <div class="contact-card">
-                    <h3>📝 個別相談・お申し込み</h3>
-                    <p>詳細な内容を記入できます<br>24時間受付中</p>
-                    <!-- 修正⑥：フォームから申込をボタン化＋指定URLに変更 -->
-                    <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=contact&utm_campaign=form_contact" class="btn btn-primary">フォームから申込</a>
-               　 </div>
-　　　　　　　　　　<div class="contact-card">
+                <div class="contact-card">
                     <h3>💬 LINE公式アカウント</h3>
                     <p>メッセージでのやり取りがスムーズ<br>お気軽にご相談ください</p>
                     <a href="https://lin.ee/kz9Mt1S?utm_source=website&utm_medium=contact&utm_campaign=line_contact" class="btn btn-line" target="_blank" rel="noopener noreferrer">LINEで相談</a>
-               　 </div>
+                </div>
+                
+                <div class="contact-card">
+                    <h3>📝 個別相談・お申し込み</h3>
+                    <p>詳細な内容を記入できます<br>24時間受付中</p>
+                    <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=contact&utm_campaign=form_contact" class="btn btn-primary">フォームから申込</a>
+                </div>
             </div>
             
             <p style="color: #8b7355; margin-top: 25px; font-size: 0.95rem;">
@@ -703,11 +793,9 @@
     <!-- フッター -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 ふんわり米粉パン教室. All rights reserved.</p>
+            <p>&copy; 2024 今林美恵子パン教室. All rights reserved.</p>
             <p>福岡・オンライン対応｜講師養成・開業サポート</p>
         </div>
     </footer>
 </body>
 </html>
-
-
