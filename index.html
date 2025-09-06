@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ふんわり米粉パン教室 | 講師が習いに来る技術力で40代からのセカンドキャリアを全力サポート</title>
-    <meta name="description" content="福岡・オンライン対応のパン教室。指導歴20年・3000人指導の実績。">
+    <title>ふんわり米粉美恵子パン教室 | 講師が習いに来る技術力で40代からのセカンドキャリアを全力サポート</title>
+    <meta name="description" content="福岡・オンライン対応のパン教室。指導歴20年・1000人指導の実績。">
     <style>
         * {
             margin: 0;
@@ -25,7 +25,7 @@
             padding: 0 20px;
         }
 
-        /* ヘッダー - register-choice.htmlと完全統一 */
+        /* ヘッダー */
         .header {
             background: linear-gradient(135deg, #f5f2e9 0%, #e8e4d9 100%);
             padding: 15px 0;
@@ -104,7 +104,6 @@
             text-align: center;
         }
 
-        /* オーバーレイで文字の可読性を確保 */
         .hero::before {
             content: '';
             position: absolute;
@@ -404,6 +403,40 @@
             font-size: 0.95rem;
         }
 
+        /* ボタンスタイル統一 */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-line {
+            background: #00C300;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 195, 0, 0.3);
+        }
+
+        .btn-line:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 195, 0, 0.4);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+        }
+
         /* フッター */
         .footer {
             background: #6b5b47;
@@ -482,14 +515,15 @@
                         <li><a href="#instructor">講師紹介</a></li>
                         <li><a href="#courses">コース案内</a></li>
                         <li><a href="#contact">お問い合わせ</a></li>
-                        <li><a href="register-choice.html?utm_source=website&utm_medium=nav&utm_campaign=nav_consult">個別相談</a></li>
+                        <!-- 修正①：ヘッダーからの遷移先を指定URLに変更 -->
+                        <li><a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=nav&utm_campaign=nav_consult">個別相談</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- ヒーローセクション - 画像全幅＋文字オーバーレイ -->
+    <!-- ヒーローセクション -->
     <section id="hero" class="hero">
         <div class="hero-content">
             <h2 class="hero-title">講師が習いに来るパン教室</h2>
@@ -497,13 +531,17 @@
             
             <div class="hero-badges">
                 <div class="hero-badge">👨‍🍳 プロも認める技術力</div>
-                <div class="hero-badge">📊 指導歴20年・3000人指導</div>
+                <div class="hero-badge">📊 指導歴20年・1000人指導</div>
                 <div class="hero-badge">🎯 講師養成・開業サポート</div>
             </div>
 
             <div class="hero-cta-buttons">
-                <a href="register-choice.html?utm_source=website&utm_medium=hero&utm_campaign=main_cta" class="hero-btn hero-btn-primary">
+                <!-- 修正②：個別相談ボタンを指定URLに変更 -->
+                <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=hero&utm_campaign=main_cta" class="hero-btn hero-btn-primary">
                     📝 個別相談・お申し込み
+                </a>
+                <a href="https://lin.ee/kz9Mt1S?utm_source=website&utm_medium=hero&utm_campaign=line_cta" class="hero-btn hero-btn-line" target="_blank" rel="noopener noreferrer">
+                    💬 LINEで相談
                 </a>
             </div>
         </div>
@@ -521,7 +559,7 @@
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">📒</div>
+                    <div class="feature-icon">👩‍🏫</div>
                     <h3>講師養成・開業サポート</h3>
                     <p>単なるパン作りだけでなく、講師として独立したい方、教室開業を目指す方への総合的なサポートを提供しています。</p>
                 </div>
@@ -542,9 +580,9 @@
             <div class="instructor-content">
                 <div class="instructor-avatar">👩‍🍳</div>
                 <h3 class="instructor-name">今林美恵子</h3>
-                <p class="instructor-title">パン教室講師・フードコーディネート</p>
+                <p class="instructor-title">パン教室講師・テーブルコーディネーター</p>
                 <div class="instructor-description">
-                    <p>20年間のパン教室運営で3000人以上を指導。プロの講師も技術を習いに来るほどの技術力を持ち、常に新しい技術の導入に熱心です。パン以外にも菓子、料理の腕があり、ラッピングやテーブルコーディネートにも定評があります。</p>
+                    <p>20年間のパン教室運営で1000人以上を指導。プロの講師も技術を習いに来るほどの技術力を持ち、常に新しい技術の導入に熱心です。パン以外にも菓子、料理の腕があり、ラッピングやテーブルコーディネートにも定評があります。</p>
                     <br>
                     <p>現在はカルチャーセンターでの指導に加え、オンラインでのパン教室も展開。40代以降の女性のセカンドキャリア支援として、講師養成コースや開業サポートにも力を入れています。</p>
                 </div>
@@ -559,7 +597,7 @@
             <div class="courses-grid">
                 <div class="course-card">
                     <div class="course-header">
-                        <h3>🍞 基礎・スキルアップ</h3>
+                        <h3>🎯 基礎・スキルアップ</h3>
                         <p>詳細は個別相談で</p>
                     </div>
                     <div class="course-content">
@@ -570,13 +608,14 @@
                             <li>成形技術の習得</li>
                             <li>失敗しないコツ</li>
                         </ul>
-                        <a href="register-choice.html?utm_source=website&utm_medium=course&utm_campaign=basic_course" class="course-btn">詳細を相談する</a>
+                        <!-- 修正③：詳細を相談するボタンを指定URLに変更 -->
+                        <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=course&utm_campaign=basic_course" class="course-btn">詳細を相談する</a>
                     </div>
                 </div>
 
                 <div class="course-card">
                     <div class="course-header">
-                        <h3>🔍 講師養成コース</h3>
+                        <h3>👩‍🏫 講師養成コース</h3>
                         <p>詳細は個別相談で</p>
                     </div>
                     <div class="course-content">
@@ -587,7 +626,8 @@
                             <li>生徒対応の方法</li>
                             <li>講師としての心構え</li>
                         </ul>
-                        <a href="register-choice.html?utm_source=website&utm_medium=course&utm_campaign=instructor_course" class="course-btn">詳細を相談する</a>
+                        <!-- 修正④：詳細を相談するボタンを指定URLに変更 -->
+                        <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=course&utm_campaign=instructor_course" class="course-btn">詳細を相談する</a>
                     </div>
                 </div>
 
@@ -604,7 +644,8 @@
                             <li>運営ノウハウの提供</li>
                             <li>継続的なサポート</li>
                         </ul>
-                        <a href="register-choice.html?utm_source=website&utm_medium=course&utm_campaign=business_support" class="course-btn">詳細を相談する</a>
+                        <!-- 修正⑤：詳細を相談するボタンを指定URLに変更 -->
+                        <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=course&utm_campaign=business_support" class="course-btn">詳細を相談する</a>
                     </div>
                 </div>
             </div>
@@ -625,7 +666,8 @@
                 <div class="contact-card">
                     <h3>📝 個別相談・お申し込み</h3>
                     <p>詳細な内容を記入できます<br>24時間受付中</p>
-                    <a href="register-choice.html?utm_source=website&utm_medium=contact&utm_campaign=form_contact" class="btn btn-primary">フォームから申込</a>
+                    <!-- 修正⑥：フォームから申込をボタン化＋指定URLに変更 -->
+                    <a href="https://miminosuke.github.io/imapan_consult/register-choice.html?utm_source=website&utm_medium=contact&utm_campaign=form_contact" class="btn btn-primary">フォームから申込</a>
                 </div>
             </div>
             
@@ -645,5 +687,3 @@
     </footer>
 </body>
 </html>
-
-
